@@ -10,6 +10,7 @@ const Navbar = () => {
                 <Link href={"/"} className="flex items-center gap-2">
                     <Image src={"/logo.svg"} width={32} height={32} alt="Vibe" className="shrink-0 invert dark:invert-0" />
                 </Link>
+                <UserButton />
                 <SignedOut>
                     <div className="flex gap-2">
                         <SignUpButton>
