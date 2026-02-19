@@ -1,10 +1,20 @@
+"use client"
+import { Button } from '@/components/ui/button'
+import { inngest } from '@/inngest/client'
+import { onInvoke } from '@/modules/home/actions'
 import ProjectForm from '@/modules/home/components/project-form'
 import Image from 'next/image'
-import React from 'react'
+import { toast } from 'sonner'
 
 const Page = () => {
+  const inVokeAgent = async () => {
+    const agent = onInvoke();
+    console.log(agent);
+    toast.success("Done")
+  }
   return (
     <div className='flex items-center justify-center w-full px-4 py-8'>
+      <Button onClick={inVokeAgent}>Invoke AI Agent</Button>
       <div className="max-w-5xl w-full">
         <section className='space-y-8 flex flex-col items-center'>
           <div className='flex flex-col items-center'>
